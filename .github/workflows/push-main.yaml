@@ -26,10 +26,6 @@ jobs:
         run: npm run lint
         working-directory: ./node
 
-      - name: Run app
-        run: npm start
-        working-directory: ./node
-
       - name: Create artifact
         uses: actions/upload-artifact@v4
         with:
