@@ -1,0 +1,12 @@
+{
+  "name": "mini-node-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "eslint": "^9.39.1"
+  }
+}
