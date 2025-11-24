@@ -4,28 +4,28 @@ on:
     branches:
       - main
   jobs:
-  install nodeJS:
-    runs-on: ubuntu:latest
-    if: github.ref == 'refs/heads/main'
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    install nodeJS:
+      runs-on: ubuntu:latest
+      if: github.ref == 'refs/heads/main'
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v3
 
-      - name: Install nodeJS
-        uses: actions/setup-node@v3
-        with:
-          node-version: "24.11.0"
+        - name: Install nodeJS
+          uses: actions/setup-node@v3
+          with:
+            node-version: "24.11.0"
 
-      - name: Install dependencies
-        run: npm install
+        - name: Install dependencies
+          run: npm install
 
-      - name: Execute linting
-        run: npm run lint
+        - name: Execute linting
+          run: npm run lint
 
-      - name: Run app
-        run: npm start
+        - name: Run app
+          run: npm start
 
-      - name: Create artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: project-artifact
+        - name: Create artifact
+          uses: actions/upload-artifact@v3
+          with:
+            name: project-artifact
