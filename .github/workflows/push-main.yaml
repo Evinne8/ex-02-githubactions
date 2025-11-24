@@ -20,12 +20,15 @@ jobs:
 
       - name: Install dependencies
         run: npm i
+        working-directory: ./node
 
       - name: Execute linting
         run: npm run lint
+        working-directory: ./node
 
       - name: Run app
         run: npm start
+        working-directory: ./node
 
       - name: Create artifact
         uses: actions/upload-artifact@v4
